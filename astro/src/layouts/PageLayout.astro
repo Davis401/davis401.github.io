@@ -1,0 +1,42 @@
+---
+import Navbar from '../components/navbar.astro'
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} | Davis Johnson Developer</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Oranienbaum&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="src/styles/global.css">
+
+	</head>
+	<body>
+        
+		<Navbar />
+
+        <slot />
+
+	</body>
+</html>
+
+
+<style>
+    body {
+        background-color: #D2FC43;
+    }
+	.coming-soon {
+		font-family: 'Oranienbaum', serif;
+		padding: 300px;
+		text-align: center;
+		width: 100%;
+	}
+</style>
