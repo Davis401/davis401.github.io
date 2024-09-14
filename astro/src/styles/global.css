@@ -7,10 +7,31 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'FerriteCore';
+    src: url('/fonts/FerriteCoreDX-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'EmotionEngine';
+    src: url('/fonts/EmotionEngine-8ynA.ttf') format('truetype');
+  }
+
 h1, #nav {
     font-family: 'Troglo', sans-serif;
 }
 
 .coming-soon {
     font-family: 'Oranienbaum', serif;
+}
+
+.ferrite {
+    font-family: 'FerriteCore';
+}
+  
+.emotion {
+    font-family: 'EmotionEngine';
 }
