@@ -20,10 +20,6 @@
     src: url('/fonts/EmotionEngine-8ynA.ttf') format('truetype');
   }
 
-h1, #nav {
-    font-family: 'Troglo', sans-serif;
-}
-
 .coming-soon {
     font-family: 'Oranienbaum', serif;
 }

@@ -5,16 +5,16 @@ import PageLayout from '../layouts/PageLayout.astro'
 
 <PageLayout title="Games">
 
-    <h1 class="text-center text-4xl p-4">Games</h1>
+    <h1 class="text-center text-6xl emotion tracking-widest my-16">Games</h1>
 
 
     <div id="game-container" class="container mx-auto emotion">
         <div class="grid">
-            <div><a href="https://store.steampowered.com/app/3083290/The_Curse_of_Karlanrik/">Curse of Karlanrik</a></div>
-            <div><a href="https://capt-magni.itch.io/rusting-steiners">Rusting Steiners</a></div>
-            <div><a href="https://capt-magni.itch.io/strike-mode">Strike Mode</a></div>
-            <div><a href="https://capt-magni.itch.io/bouncin">Bouncin</a></div>
-    </div>
+            <a href="https://store.steampowered.com/app/3083290/The_Curse_of_Karlanrik/">Curse of Karlanrik</a>
+            <a href="https://capt-magni.itch.io/rusting-steiners">Rusting Steiners</a>
+            <a href="https://capt-magni.itch.io/strike-mode">Strike Mode</a>
+            <a href="https://capt-magni.itch.io/bouncin">Bouncin</a>
+        </div>
     </div>
 
 
@@ -22,8 +22,10 @@ import PageLayout from '../layouts/PageLayout.astro'
 
 
 <style>
-    #game-container {
+    div#game-container div.grid a {
         font-size: 32px;
-        color: #2b2b2b
+        padding: 8px;
+        color: #2b2b2b !important;
+        letter-spacing: 0.1em;
     }
 </style>
