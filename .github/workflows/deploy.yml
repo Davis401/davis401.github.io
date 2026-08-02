@@ -41,7 +41,7 @@ jobs:
       - name: Upload build output
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./photos/build
+          path: ./build
 
   deploy:
     needs: build

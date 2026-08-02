@@ -3,7 +3,7 @@ import { join } from 'node:path';
 
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif']);
 
-/** @type {import('./$types').PageServerLoad} */
+/** @type {import('../$types').PageServerLoad} */
 export function load() {
 	const photosDir = join(process.cwd(), 'static', 'photos');
 
