@@ -1,0 +1,26 @@
+---
+import PageLayout from '../layouts/PageLayout.astro'
+
+
+import { Image } from 'astro:assets';
+
+const photos = await Astro.glob('/src/assets/photos/*.{jpg,jpeg,png,webp}');
+---
+
+
+<PageLayout title="Photos">
+
+    <div class="grid">
+      {photos.map((photo) => (
+        <Image src={photo.default} alt="" width={400} loading="lazy" />
+      ))}
+    </div>
+
+
+</PageLayout>
+
+
+
+
+Page for my photography, build a view gallery
+ Images hosted at https://davis-photos-bucket.s3.us-east-2.amazonaws.com/photos/water_under_bridge.jpg

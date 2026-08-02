@@ -17,15 +17,31 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./photos
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v3
-      - name: Install, build, and upload your site
-        uses: withastro/action@v0
+        uses: actions/checkout@v4
+
+      - name: Set up bun
+        uses: oven-sh/setup-bun@v2
         with:
-              path: ./astro
-              node-version: 18 
-              package-manager: npm
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: Build site
+        run: bun run build
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload build output
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./photos/build
 
   deploy:
     needs: build
@@ -36,4 +52,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
